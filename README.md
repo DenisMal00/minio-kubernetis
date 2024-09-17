@@ -15,10 +15,10 @@ This repository provides a Kubernetes setup for MinIO
 - Start Minikube with a custom configuration to ensure enough resources for MinIO:
 
      ```bash
-     minikube start --cpus=4 --memory=7000
+     minikube start --cpus=4 --memory=7192
      ```
 
-   This starts Minikube with 4 CPUs and 8 GB of memory, which is typically enough for running MinIO.
+   This starts Minikube with 4 CPUs and 7 GB of memory, which is typically enough for running MinIO.
 
 ### Step 2: Install MinIO Operator and Tenant
 - Add the MinIO Operator Helm repository:
