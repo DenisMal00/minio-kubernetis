@@ -15,7 +15,7 @@ This repository provides a Kubernetes setup for MinIO
 - Start Minikube with a custom configuration to ensure enough resources for MinIO:
 
      ```bash
-     minikube start --cpus=4 --memory=8192
+     minikube start --cpus=4 --memory=7000
      ```
 
    This starts Minikube with 4 CPUs and 8 GB of memory, which is typically enough for running MinIO.
