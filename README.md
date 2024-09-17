@@ -75,3 +75,37 @@ https://miniostorage.com
 ```
 user: minio
 password: minio123
+
+
+## Monitoring Kubernetes with Prometheus and Grafana 
+
+- Add the Prometheus Operator Helm chart repository and install it:
+
+```bash
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+```
+- Install the Prometheus Operator chart (which includes Grafana):
+
+```bash
+helm install prometheus-operator prometheus-community/kube-prometheus-stack --namespace monitoring --create-namespace
+```
+
+### Accessing Prometheus Using Port Forwarding
+
+```bash
+kubectl port-forward --namespace monitoring svc/prometheus-operated 8000:9090
+```
+This will allow you to access Prometheus on your local machine at http://localhost:8000
+
+
+### Accessing Grafana Using Port Forwarding
+```bash
+kubectl --namespace monitoring port-forward svc/prometheus-operator-grafana 3000:80
+```
+Then, access Grafana at http://localhost:3000
+
+#### Get the Grafana Admin Credentials
+```bash
+kubectl get secret --namespace monitoring prometheus-operator-grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+```
