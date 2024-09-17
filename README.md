@@ -1,4 +1,4 @@
-# MinIO Kubernetes Deployment with Admin User Creation Script
+# MinIO Kubernetes Deployment 
 
 This repository provides a Kubernetes setup for MinIO
 
