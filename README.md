@@ -42,7 +42,7 @@ helm install \
 kubectl create namespace minio
 ```
 - Apply tls secret
-  To ensure proper SSL/TLS handling, you need to make sure the MinIO Tenant's CA certificate is trusted.
+  To ensure proper SSL/TLS handling, you need to make sure the MinIO Tenant's CA (myCA.crt in certs) certificate is trusted.
 
 ```bash
 kubectl apply -f secret-minio-tls.yaml
