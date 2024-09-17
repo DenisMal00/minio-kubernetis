@@ -54,7 +54,7 @@ kubectl apply -f secret-minio-tls.yaml
 helm install minio-tenant minio-operator/tenant \
     --namespace minio -f values.yaml
 ```
-
+Wait until all the pods are running
 ### Step 4: Run Minio
 - Add miniostorage.com to /etc/hosts as localhost
 
