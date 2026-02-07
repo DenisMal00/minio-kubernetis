@@ -1,7 +1,12 @@
 # MinIO Kubernetes Deployment 
 
-This repository provides a Kubernetes setup for MinIO
+## Overview
 
+This repository contains a **local Kubernetes deployment of MinIO** using **Minikube and Helm**, designed for development and testing purposes.
+
+It demonstrates how to deploy and manage a **MinIO Tenant via the MinIO Operator**, expose it securely using **Ingress with TLS**, and monitor the cluster and storage services with **Prometheus and Grafana**.
+
+The setup provides an **S3-compatible object storage environment** running entirely on a local Kubernetes cluster
 ## Prerequisites
 
 - Minikube.
